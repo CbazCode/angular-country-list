@@ -10,6 +10,7 @@ import { PaisService } from '../../services/pais.service';
 })
 export class PorPaisComponent {
 
+  placeholder:string = "Buscar por país..."
   termino: string = ''
   hayError: boolean = false;
   paises: Country[] = [];
@@ -26,5 +27,9 @@ export class PorPaisComponent {
       this.paises = []
       console.log(err)
     })
+  }
+
+  sugerencias(termino:string){
+    this.hayError = false
   }
 }

@@ -9,15 +9,15 @@
       </tr>
   </thead>
   <tbody>
-      <tr *ngFor="let pais of paises; let i = index">
+      <tr *ngFor="let item of list; let i = index">
           <td> {{ i + 1 }} </td>
           <td>
-              <img class="small-flag" [src]="pais.flag" >
+              <img class="small-flag" [src]="item.flag" >
           </td>
-          <td> {{ pais.capital }}, {{ pais.name }}</td>
-          <td>{{ pais.population | number }}</td>
+          <td> {{ item.capital }}, {{ item.name }}</td>
+          <td>{{ item.population | number }}</td>
           <td>
-              <a [routerLink]="['/pais', pais.alpha2Code]">Ver...</a>
+              <a [routerLink]="['/pais', item.alpha2Code]">Ver...</a>
           </td>
       </tr>
   </tbody>

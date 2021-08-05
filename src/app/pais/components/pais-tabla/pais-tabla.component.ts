@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Capital } from '../../interfaces/capital.interface';
 import { Country } from '../../interfaces/pais.interface';
 
 @Component({
@@ -8,9 +9,7 @@ import { Country } from '../../interfaces/pais.interface';
 })
 export class PaisTablaComponent {
 
-  @Input('paises') paises:Country[] = []
+  @Input() list: Country[] = []
   constructor() { }
-
-
 
 }
